@@ -4,6 +4,8 @@ import "./App.scss";
 import Countdown from "./components/Countdown/countdown";
 import Reveal from "./components/Reveal/reveal";
 
+import lightImage from "./assets/images/abstract-267046_1920.png";
+
 function App() {
   const [timeOver, setTimeOver] = useState(1);
 
@@ -15,7 +17,12 @@ function App() {
   return (
     <div className="App">
       {timeOver > 0 ? (
-        <Countdown endTime="2020-05-23 23:37" parentFunction={timeFromChild} />
+        <Countdown
+          endTime="2020-04-24 00:20"
+          parentFunction={timeFromChild}
+          theme="light"
+          image={lightImage}
+        />
       ) : (
         <Reveal text="Bombastic Reveal" />
       )}

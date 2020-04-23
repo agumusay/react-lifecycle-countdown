@@ -2,12 +2,14 @@ import React, { useEffect, useState } from "react";
 import moment from "moment";
 import "./countdown.scss";
 
-// let countDownStyles = {
-//   background: "black",
-// };
 function Countdown(props) {
   let [timeObject, setTimeObject] = useState({});
-
+  let countDownStyles = {
+    background: `url(${props.image})`,
+    backgroundPosition: "center",
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+  };
   useEffect(() => {
     let didCancel = false;
     let myInterval = setInterval(() => {
@@ -33,7 +35,7 @@ function Countdown(props) {
 
   return (
     <section className="countdown">
-      <div className="countdown-date">
+      <div className={`countdown-date ${props.theme}`} style={countDownStyles}>
         <div className="countdown-date-time">
           <span>{timeObject.days}</span> days
         </div>

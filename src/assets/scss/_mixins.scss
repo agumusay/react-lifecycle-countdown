@@ -1,0 +1,13 @@
+@mixin light($background) {
+  background: $background;
+  * {
+    color: black;
+  }
+}
+
+@mixin dark($background) {
+  background: $background;
+  * {
+    color: white;
+  }
+}
