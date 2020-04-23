@@ -18,13 +18,13 @@ function App() {
     <div className="App">
       {timeOver > 0 ? (
         <Countdown
-          endTime="2020-04-24 00:20"
+          endTime="2020-04-24 00:50"
           parentFunction={timeFromChild}
           theme="light"
           image={lightImage}
         />
       ) : (
-        <Reveal text="Bombastic Reveal" />
+        <Reveal text="Some fancy reveal text..." />
       )}
     </div>
   );
