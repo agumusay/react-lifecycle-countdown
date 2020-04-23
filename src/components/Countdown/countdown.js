@@ -10,6 +10,7 @@ function Countdown(props) {
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
   };
+
   useEffect(() => {
     let didCancel = false;
     let myInterval = setInterval(() => {
@@ -18,9 +19,10 @@ function Countdown(props) {
       let difference = Math.round((end - now) / 1000);
       props.parentFunction(difference);
       let duration = moment.duration(end.diff(now));
+      console.log(moment(difference));
       if (!didCancel) {
         setTimeObject({
-          days: duration.days(),
+          days: end.diff(now, "days"),
           hours: duration.hours(),
           minutes: duration.minutes(),
           seconds: duration.seconds(),
