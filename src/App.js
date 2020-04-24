@@ -17,7 +17,7 @@ function App() {
           endTime="2020-05-26"
           parentFunction={timeFromChild}
           theme="light"
-          image={lightImage}
+          background={lightImage}
         />
       ) : (
         <Reveal text="Some fancy reveal text..." />

@@ -5,7 +5,7 @@ import "./countdown.scss";
 function Countdown(props) {
   let [timeObject, setTimeObject] = useState({});
   let countDownStyles = {
-    background: `url(${props.image})`,
+    background: `${props.background ? `url(${props.background})` : ""}`,
     backgroundPosition: "center",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
@@ -62,6 +62,7 @@ function Countdown(props) {
 Countdown.defaultProps = {
   title: "Coming Soon",
   leadText: "Stick around to be one of the first",
+  theme: "dark",
 };
 
 export default Countdown;
